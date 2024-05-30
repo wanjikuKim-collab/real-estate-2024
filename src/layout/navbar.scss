@@ -1,6 +1,65 @@
+@import '../responsive.scss';
+
 nav{
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a{
+        transition: all 0.4s ease;
+
+        &:hover{
+            scale: 1.05;
+        }
+    }
+
+    .left{
+        flex:3;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+
+        .logo{
+            display: flex;
+            align-items: center;font-weight: bold;
+            color: #63431d;
+            img{
+                width: 48px;
+            }
+
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            li{
+                a{
+                    transition: all 0.4s ease;
+            
+                    &:hover{
+                        scale: 1.05;
+                    }
+                }
+            }
+        }
+    }
+
+    .right{
+        flex:2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        
+        a{
+            padding: 12px 24px;
+        }
+
+        .register{
+            background-color:#FFDE59 ;
+        }
+    }
 }
