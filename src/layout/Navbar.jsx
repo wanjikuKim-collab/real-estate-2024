@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navbar.scss'
 import logo from '../assets/logo.png'
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 
 function Navbar() {
   let navItems = [
@@ -9,6 +12,13 @@ function Navbar() {
     {name:"Listings", link: "/"},
     {name:"Contact", link: "/"}
   ]
+
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () =>{
+    setOpen(!open)
+  };
+
   return (
     <nav>
         <div className="left">
@@ -16,16 +26,30 @@ function Navbar() {
             <img src={logo} alt='Kimmy Keys logo'/>
             <span>Kimmy Keys<br /> Real Estate</span>
           </a>
-          <ul>
           {
-            navItems.map((item)=><li key={item.name}><a href={item.link}>{item.name}</a></li>
+            navItems.map((item)=><a key={item.name} href={item.link}>{item.name}</a>
             )
           }
-          </ul>
         </div>
         <div className="right">
           <a href="/signin">Sign In</a>
           <a href="/signup" className="register">Sign Up</a>
+              
+              {/* Humberger Menu for Mobile View */}
+          <div className="menuIcon" onClick={toggleMenu}>
+           {
+              open == true ? <IoClose/> : <GiHamburgerMenu />
+           } 
+          </div>
+          <div className={open ? "menu active" : "menu"}>
+          {
+            navItems.map((item)=><a key={item.name} href={item.link}>{item.name}</a>
+            )
+          }
+          <a href="/signin">Sign In</a>
+          <a href="/signup">Sign Up</a>          
+
+          </div>
         </div>
     </nav>
     )
