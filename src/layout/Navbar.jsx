@@ -41,6 +41,7 @@ function Navbar() {
               open == true ? <IoClose/> : <GiHamburgerMenu />
            } 
           </div>
+          {/* menu items */}
           <div className={open ? "menu active" : "menu"}>
           {
             navItems.map((item)=><a key={item.name} href={item.link}>{item.name}</a>

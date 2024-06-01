@@ -82,20 +82,27 @@ nav{
         }
 
         .menu{
-            position: absolute;
-            top: 0;
-            right: -50%;
-            background-color:black;
-            height: 100vh;
-            color:white;
-            width: 50%;
-            transition: all 1s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px ;
-            gap: 10px;
+            display: none;
+           
+            @include sm{
+                display:flex;
+                position: absolute;
+                top: 0;
+                right: -50%;
+                background-color:black;
+                height: 100vh;
+                color:white;
+                width: 50%;
+                transition: all 1s ease;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px ;
+                gap: 10px;
+    
+            }
+            
+            //when open is true the class name is both active and menu
             &.active{
                 right:0;
 
