@@ -36,9 +36,9 @@ function Navbar() {
           <a href="/signup" className="register">Sign Up</a>
               
               {/* Humberger Menu for Mobile View */}
-          <div className="menuIcon" onClick={toggleMenu}>
+          <div className = {open? " menuIcon active" : "menuIcon"} onClick={toggleMenu}>
            {
-              open == true ? <IoClose/> : <GiHamburgerMenu />
+              open ? <IoClose/> : <GiHamburgerMenu />
            } 
           </div>
           {/* menu items */}

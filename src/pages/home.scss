@@ -1,42 +1,97 @@
-.home{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    .headerWrapper{
-        flex:3;
-        .wrapper{
-            padding-right: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            height: 100%;
+@import "../responsive.scss";
 
-            .title{
-                font-size: 3em;
-            }
+.home {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 
-            .boxes{
-                display: flex;
-                justify-content: space-between;
+  @include sm {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
-                h2{
-                    font-size: 20px;
-                    font-weight: 300;
-                }
-            }
-        }
+  .headerWrapper {
+    width: 66.66667%;
+
+    @include md{
+        width: auto;
     }
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
 
-    .imgWrapper{
-        flex: 2;
+      @include lg {
+        gap: 20px;
+      }
+
+      @include md {
+        padding: 0;
+      }
+
+      .title {
+        font-size: 60px;
+
+        @include lg {
+          font-size: 3em;
+        }
+
+        @include sm {
+          font-size: 32px;
+        }
+      }
+
+      p {
+        @include sm {
+          font-size: 16px;
+        }
+      }
+
+      .boxes {
         display: flex;
-        align-items: center;        
+        justify-content: space-between;
 
-        .img{
-            object-fit: cover;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            
+        @include sm {
+          display: none;
         }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
     }
+  }
+
+  .imgWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include lg {
+      position: absolute;
+      right: 0;
+      width: 33.333333%;
+
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: block;
+      position: relative;
+      width: auto;
+      z-index: -1;
+    }
+
+    .img {
+      flex: 2;
+      object-fit: contain;
+    }
+  }
 }

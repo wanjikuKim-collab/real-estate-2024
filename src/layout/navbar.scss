@@ -26,6 +26,10 @@ nav{
         align-items: center;
         gap: 50px;
 
+        @include md{
+            gap: 40px;
+        }
+
 
         .logo{
             display: flex;
@@ -63,10 +67,14 @@ nav{
         
         a{
             padding: 12px 24px;
+
+            @include md{
+                padding: 10px;
+            }
         }
 
         .register{
-            background-color:#FFDE59 ;
+            background-color:#f5ac0f ;
         }
         
         .menuIcon{
@@ -77,7 +85,10 @@ nav{
                 display: initial;
                 cursor: pointer;
                 font-size: 30px;
-                color:white;
+
+                &.active{
+                    color: white;
+                }
             }
         }
 
@@ -105,6 +116,7 @@ nav{
             //when open is true the class name is both active and menu
             &.active{
                 right:0;
+                position: fixed;// fixes the navbar in position on scroll
 
             }
             // initially on line 10 we added display none for a in sm screens

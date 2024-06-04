@@ -2,31 +2,34 @@
 
 //order of media queries css is based on whether it's mobile first approach or not
 // this is from largest to smallest
-.layout{
-    height: 100vh;
-    max-width: 1366px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 
-    @include lg{
-        // background-color: red;
-        max-width: 1280px;
-    }
+    /*The body content has been set to a maximum width of 1280 pixels 
+     — in viewports above that width, the body remains at 1200px
+     and centers itself in the available space.*/
+  @include lg {
+    // background-color: rgb(229, 138, 138);
+    max-width: 1280px;
+  }
 
-    @include md{
-        background-color:chartreuse;
-        max-width: 768px;
-    }
-    
-    @include sm{
-        background-color: aqua;
-        max-width: 360px;
-    }
-    .content{
-        flex: 1;
-    }
+  @include md {
+    // background-color: rgb(189, 243, 135);
+    max-width: 768px;
+  }
+
+  @include sm {
+    // background-color: rgb(118, 238, 238);
+    max-width: 360px;
+  }
+  .content {
+    flex: 1;
+  }
 }

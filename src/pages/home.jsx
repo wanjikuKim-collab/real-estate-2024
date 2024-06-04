@@ -1,5 +1,6 @@
 import "./home.scss";
 import hero from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
 import SearchBar from "../components/SearchBar"
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
           </p>
           <SearchBar/>
           <div className="boxes">
-          <div className="box">
+            <div className="box">
               <h1>16+</h1>
               <h2>Years of Experience</h2>
             </div>
@@ -32,9 +33,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="imgWrapper">
-        <img src={hero} />
-      </div>
+      <picture className="imgWrapper">
+        <source media="(min-width: 1366px )" srcset={hero2} />
+        <img src={hero} alt="AI generated real estate appartment"/>
+      </picture>
     </div>
   );
 }
