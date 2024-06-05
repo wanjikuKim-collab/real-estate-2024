@@ -3,6 +3,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Listing from "./pages/Listing";
 import Layout from "./layout/layout";
 import Property from "./pages/Property"
+
+// Defines application routes using React Router v6.
+// - Layout component provides the overall application structure.
+// - Home, Listing, and Property pages are nested within the layout.
+// - The route "/:id" captures a dynamic parameter for the Property page.
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +29,7 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
+   //App component renders RouterProvider with the defined router object
   return <RouterProvider router={router} />;
 }
 
