@@ -1,11 +1,12 @@
 import "./filter.scss";
+import { ImSearch } from "react-icons/im";
 
 function Filter() {
   return (
     <div className="filter">
-      <hi>
+      <h1>
         Search results for: <b>London</b>
-      </hi>
+      </h1>
       <div className="top">
         <div className="item">
           <label htmlFor="location">Location</label>
@@ -64,6 +65,7 @@ function Filter() {
             placeholder="any"
           />
         </div>
+        <button><ImSearch color={"#fff"} size={20}/></button>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@
      — in viewports above that width, the body remains at 1200px
      and centers itself in the available space.*/
   @include lg {
-    background-color: rgb(229, 138, 138);
+    // background-color: rgb(229, 138, 138);
     max-width: 1280px;
   }
 
