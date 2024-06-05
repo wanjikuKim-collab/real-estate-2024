@@ -4,6 +4,7 @@ import logo from '../assets/logo.png'
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   let navItems = [
@@ -22,18 +23,18 @@ function Navbar() {
   return (
     <nav>
         <div className="left">
-          <a className='logo' href="/">
+          <NavLink className='logo' to="/">
             <img src={logo} alt='Kimmy Keys logo'/>
             <span>Kimmy Keys<br /> Real Estate</span>
-          </a>
+          </NavLink>
           {
-            navItems.map((item)=><a key={item.name} href={item.link}>{item.name}</a>
+            navItems.map((item)=><NavLink key={item.name} to={item.link}>{item.name}</NavLink>
             )
           }
         </div>
         <div className="right">
-          <a href="/signin">Sign In</a>
-          <a href="/signup" className="register">Sign Up</a>
+          <NavLink to="/signin">Sign In</NavLink>
+          <NavLink to="/signup" className="register">Sign Up</NavLink>
               
               {/* Humberger Menu for Mobile View */}
           <div className = {open? " menuIcon active" : "menuIcon"} onClick={toggleMenu}>
@@ -44,11 +45,11 @@ function Navbar() {
           {/* menu items */}
           <div className={open ? "menu active" : "menu"}>
           {
-            navItems.map((item)=><a key={item.name} href={item.link}>{item.name}</a>
+            navItems.map((item)=><NavLink key={item.name} to={item.link}>{item.name}</NavLink>
             )
           }
-          <a href="/signin">Sign In</a>
-          <a href="/signup">Sign Up</a>          
+          <NavLink to="/signin">Sign In</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>          
 
           </div>
         </div>

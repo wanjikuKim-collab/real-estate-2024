@@ -21,15 +21,16 @@
   }
 
   @include md {
-    background-color: rgb(189, 243, 135);
+    // background-color: rgb(189, 243, 135);
     max-width: 768px;
   }
 
   @include sm {
-    background-color: rgb(118, 238, 238);
+    // background-color: rgb(118, 238, 238);
     max-width: 360px;
+    height: 100%;
   }
   .content {
-    flex: 1;
+    height: 100%;
   }
 }
