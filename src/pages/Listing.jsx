@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import Filter from "../components/Filter";
 import { listData } from "../lib/dummydata";
 import "./listing.scss";
+import Map from "../components/Map"
 
 function Listing() {
   let data = listData;
@@ -16,7 +17,9 @@ function Listing() {
           ))}
         </div>
       </div>
-      <div className="mapContainer">Map</div>
+      <div className="mapContainer">
+        <Map items={data}/>
+      </div>
     </div>
   );
 }
