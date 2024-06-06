@@ -23,14 +23,14 @@ function Slider({ images }) {
       {/* If image index is any index value say 1, 2 etc it'll display the slider */}
       {imageIndex !== null && (
         <div className="fullSlider">
-          <div className="arrow">
-            <IoIosArrowBack size={70} onClick={showPrevImage} />
+          <div className="arrowWrapper">
+            <IoIosArrowBack size={70} onClick={showPrevImage} className="arrow" />
           </div>
           <div className="imgContainer">
             <img src={images[imageIndex]} alt="" />
           </div>
-          <div className="arrow">
-            <IoIosArrowForward size={70} onClick={showNextImage} />
+          <div className="arrowWrapper">
+            <IoIosArrowForward size={70} onClick={showNextImage} className="arrow"/>
           </div>
           <div className="close" onClick={() => setImageIndex(null)}>
             <IoMdClose size={40} />

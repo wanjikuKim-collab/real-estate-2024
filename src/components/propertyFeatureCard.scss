@@ -1,0 +1,26 @@
+@import "../responsive.scss";
+
+.propertyFeatureCard{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #443607;
+    
+    @include lg{
+        font-size: 15px;
+
+    }
+
+    .featureText{
+        font-weight: bold;
+        color: black;
+
+        p{
+            font-weight: normal;
+            color: black;
+
+        }
+    }
+
+    
+}

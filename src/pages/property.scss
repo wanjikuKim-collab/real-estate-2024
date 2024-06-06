@@ -1,21 +1,46 @@
+@import "../responsive.scss";
+
 .property {
   display: flex;
-  height: 100%;
+
+  @include md {
+    flex-direction: column;
+  }
 
   .details {
     flex: 3;
+    height: 100%;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
 
     .wrapper {
       padding-right: 50px;
+
+      @include sm{
+        padding: 0;
+      }
 
       .info {
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin-top: 50px;
+       
+      
         .top {
           display: flex;
+          flex-direction: row;
           justify-content: space-between;
+
+          @include sm {
+            display: flex;
+            flex-direction: column;   
+            gap: 10px;         
+          }
           .post {
             display: flex;
             flex-direction: column;
@@ -32,20 +57,20 @@
               }
             }
             .address {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                color: #777;
-                font-size: 14px;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              color: #777;
+              font-size: 14px;
             }
             .price {
-                background-color:#63431de5; 
-                width: max-content;
-                color: #fff;
-                padding: 5px;
-                border-radius: 5px;
-                font-size: 20px;
-                font-weight: 300;
+              background-color: #63431de5;
+              width: max-content;
+              color: #fff;
+              padding: 5px;
+              border-radius: 5px;
+              font-size: 20px;
+              font-weight: 300;
             }
           }
           .user {
@@ -68,10 +93,10 @@
           }
         }
 
-        .bottom{
-            margin-top: 20px;
-            color: #555;
-            line-height: 20px;
+        .bottom {
+          margin-top: 20px;
+          color: #555;
+          line-height: 20px;
         }
       }
     }
@@ -79,9 +104,99 @@
 
   .features {
     flex: 2;
+    background-color: #e9dac9c9;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
 
     .wrapper {
       padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 10px;
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-top: 10px;
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+
+        @include sm{
+            flex-direction: column;
+            gap: 20px;
+        }
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        @include lg {
+          font-size: 15px;
+        }
+
+        @include sm {
+            font-size: 15px;
+            flex-direction: column;
+            gap: 5px;
+          }
+
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm{
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: #fff;
+          border: 1px solid #c49764c9;
+          color: hsl(45, 20%, 4%);
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

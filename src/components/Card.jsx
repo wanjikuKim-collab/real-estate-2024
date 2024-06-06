@@ -8,7 +8,6 @@ import { FaBookmark } from "react-icons/fa";
 import { FaRocketchat } from "react-icons/fa";
 import { useState } from "react";
 
-
 function Card({ item }) {
   const [save, setSave] = useState(false);
 
@@ -34,7 +33,7 @@ function Card({ item }) {
         </p>
         <p className="price">${item.price}</p>
         <div className="bottom">
-            {/* FEATURES */}
+          {/* FEATURES */}
           <div className="features">
             <div className="feature">
               <RiHotelBedLine size={20} />
