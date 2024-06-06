@@ -1,3 +1,5 @@
+@import "../responsive.scss";
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -24,6 +26,10 @@
       border: 1px solid #999;
       border-radius: 5px;
       font-size: 14px;
+
+      @include sm{
+        width: 100%;
+      }
     }
   }
 
@@ -38,6 +44,11 @@
     justify-content: space-between;
     gap: 5px;
 
+    @include sm{
+      flex-direction: column;
+
+    }
+
     button{
         width: 50px;
         padding: 10px;
@@ -46,6 +57,11 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color: #f5ac0f;
+
+        @include sm{
+          border-radius: 5px;
+          width: 100%;
+        }
     }
   }
 }

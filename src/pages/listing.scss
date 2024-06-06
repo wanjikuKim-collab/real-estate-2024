@@ -1,10 +1,21 @@
+@import "../responsive.scss";
+
 .listing {
   display: flex;
   height: 100%;
 
+  @include md{
+    flex-direction: column;
+  }
+
+ 
   .listingContainer {
     flex: 3;
     height: 100%;  
+
+    @include md{
+      // width: 100%;
+    }
 
     .wrapper{
         height: 100%;  
@@ -15,10 +26,19 @@
         overflow-y: scroll;
         padding-bottom: 50px;
 
+        @include md{
+          overflow: unset;
+        }
+
     }
   }
   .mapContainer {
     flex: 2;
     height: 100%;
+
+    @include md{
+      display: none;
+      flex: none;
+    }
   }
 }
