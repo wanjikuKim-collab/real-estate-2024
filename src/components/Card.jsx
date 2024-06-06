@@ -8,6 +8,7 @@ import { FaBookmark } from "react-icons/fa";
 import { FaRocketchat } from "react-icons/fa";
 import { useState } from "react";
 
+
 function Card({ item }) {
   const [save, setSave] = useState(false);
 
@@ -17,9 +18,12 @@ function Card({ item }) {
 
   return (
     <div className="card">
+      {/* Image Container - Links to listing details page */}
       <NavLink to={`/${item.id}`} className="imgContainer">
         <img src={item.img} />
       </NavLink>
+
+      {/* Text Container */}
       <div className="textContainer">
         <NavLink to={`/${item.id}`}>
           <h2 className="title">{item.title}</h2>
