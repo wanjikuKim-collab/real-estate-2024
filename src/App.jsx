@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Listing from "./pages/Listing";
 import Layout from "./layout/layout";
 import Property from "./pages/Property"
+import Profile from "./pages/Profile";
 
 // Defines application routes using React Router v6.
 // - Layout component provides the overall application structure.
@@ -24,7 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <Property/>
-      }
+      },
+      {
+        path: "/profile",
+        element: <Profile/>
+
+      },
     ],
   },
 ]);

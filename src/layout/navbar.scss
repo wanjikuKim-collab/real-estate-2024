@@ -64,6 +64,58 @@ nav{
         align-items: center;
         justify-content: flex-end;
         gap: 20px;
+        background-color: #e9dac9c9;
+        height: 100%;
+
+        @include md{
+            background-color: transparent;
+        }
+
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: bold;
+
+            img {
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              border-radius: 100%;
+            }
+
+            span{
+                @include sm{
+                    display: none;
+                }
+            }
+
+            .profile{
+                padding: 12px 24px;
+                background-color:#f5ac0f ;
+                cursor: pointer;
+                margin-right: 10px;
+                position: relative;
+                @include sm{
+                    display: none;
+                }
+
+                .notification{
+                    position: absolute;
+                    background-color: red;
+                    color: whitesmoke;
+                    top: -8px;
+                    right: -8px;
+                    border-radius: 50%;
+                    width: 26px;
+                    height: 26px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+          }
         
         a{
             padding: 12px 24px;
